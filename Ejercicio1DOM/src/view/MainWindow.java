@@ -51,11 +51,12 @@ public class MainWindow extends JFrame {
 		panels.add(new JPanel());
 		textField = new JTextField(10);
 		panels.get(0).add(textField);
+		panels.get(0).setLayout(new GridLayout(2, 1));
 		panels.get(1).setLayout(new GridLayout(1, 3));
 		
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < data.getNumbers().get(0); i++) {
 
-			buttons.add(new JButton("" + (i + 1)));
+			buttons.add(new JButton(data.getTexts().get(0) + (i + data.getNumbers().get(1))));
 			panels.get(1).add(buttons.get(i));
 		}
 

@@ -4,14 +4,12 @@ import model.Data;
 import view.MainWindow;
 
 public class MainController {
-	
-	private Data data;
-	private MainWindow window;
 
 	public MainController() {
 		
+		Data data = new Data();
+		MainWindow window = new MainWindow(data);
 		
-		data = new Data();
-		window = new MainWindow(data);
+		window.getTextField().addKeyListener(new textListener(window, data));
 	}
 }

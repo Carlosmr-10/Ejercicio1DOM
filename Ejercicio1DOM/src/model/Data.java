@@ -8,16 +8,12 @@ public class Data {
 	private ArrayList<String> texts = new ArrayList<>();
 	
 	/*
-	 * Builders
+	 * Builder
 	 */
-	public Data(ArrayList<Integer> numbers, ArrayList<String> texts) {
-		super();
-		this.numbers = numbers;
-		this.texts = texts;
-	}
-	
 	public Data() {
 		
+		generateTexts();
+		generateNumbers();
 	}
 
 	/*
