@@ -5,10 +5,13 @@ import view.MainWindow;
 
 public class MainController {
 	
-	private MainWindow window = new MainWindow();
-	private Data data = new Data();
+	private Data data;
+	private MainWindow window;
 
 	public MainController() {
 		
+		
+		data = new Data();
+		window = new MainWindow(data);
 	}
 }
