@@ -1,7 +1,8 @@
 package controller;
 
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+import java.awt.event.*;
+
+import javax.swing.JButton;
 
 import model.Data;
 import view.MainWindow;
@@ -32,15 +33,17 @@ public class textListener implements KeyListener {
 	@Override
 	public void keyTyped(KeyEvent e) {
 
-		if (e.getSource() == window.getButtons().get(0).getText()) {
+		if (e.getKeyCode() == Integer.parseInt(window.getButtons().get(0).getText())) {
 			
-			
+			window.getButtons().add(new JButton("1"));
 		}
-		else if (e.getSource() == window.getButtons().get(1).getText()) {
-			
+		else if (e.getKeyCode() == Integer.parseInt(window.getButtons().get(1).getText())) {
+
+			window.getButtons().add(new JButton("2"));
 		}
-		else if (e.getSource() == window.getButtons().get(2).getText()) {
-			
+		else if (e.getKeyCode() == Integer.parseInt(window.getButtons().get(2).getText())) {
+
+			window.getButtons().add(new JButton("3"));
 		}
 		else {}
 	}
